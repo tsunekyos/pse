@@ -2,7 +2,7 @@
   "license": "MIT",
   "scripts": {
     "init": "mkdirp ./dest/asset/css ./dest/asset/script ./dest/asset/images",
-    "watch:pug": "pug src/pug -o dest/ --pretty -w",
+    "watch:pug": "pug src/pug -o dest/ -b ./src/pug --pretty -w",
     "watch:scss": "node-sass src/scss/ -o dest/asset/css/ -w",
     "watch:script": "watchify src/script/app.js -t babelify -o dest/script/asset/app.js",
     "watch": "run-p watch:*",
