@@ -4,11 +4,11 @@
     "init": "mkdirp ./dest/asset/css ./dest/asset/script ./dest/asset/images",
     "watch:pug": "pug src/pug -o dest/ -b ./src/pug --pretty -w",
     "watch:scss": "node-sass src/scss/ -o dest/asset/css/ -w",
-    "watch:script": "watchify src/script/app.js -t babelify -o dest/script/asset/app.js",
+    "watch:script": "watchify src/script/app.js -t babelify -o dest/asset/script/app.js",
     "watch": "run-p watch:*",
     "build:pug": "pug src/pug -o dest/ -b ./src/pug --pretty",
     "build:scss": "node-sass src/scss/ -o dest/css/asset/",
-    "build:script": "browserify src/script/app.js -t babelify -o dest/script/asset/app.js",
+    "build:script": "browserify src/script/app.js -t babelify -o dest/asset/script/app.js",
     "build": "run-p build:*"
   },
   "devDependencies": {
