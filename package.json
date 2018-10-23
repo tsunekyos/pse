@@ -33,6 +33,6 @@
   },
   "dependencies": {
     "jquery": "^3.3.1",
-    "pixi.js": "^4.8.2",
+    "pixi.js": "^4.8.2"
   }
 }
