@@ -1,14 +1,14 @@
 {
   "license": "MIT",
   "scripts": {
-    "init": "mkdirp ./dest/css ./dest/script ./dest/images",
-    "watch:pug": "pug src/ -o dest/ --pretty -w",
-    "watch:scss": "node-sass src/scss/ -o dest/css/ -w",
-    "watch:script": "watchify src/script/app.js -t babelify -o dest/script/app.js",
+    "init": "mkdirp ./dest/asset/css ./dest/asset/script ./dest/asset/images",
+    "watch:pug": "pug src/pug -o dest/ --pretty -w",
+    "watch:scss": "node-sass src/scss/ -o dest/asset/css/ -w",
+    "watch:script": "watchify src/script/app.js -t babelify -o dest/script/asset/app.js",
     "watch": "run-p watch:*",
-    "build:pug": "pug src/ -o dest/ --pretty",
-    "build:scss": "node-sass src/scss/ -o dest/css/",
-    "build:script": "browserify src/script/app.js -t babelify -o dest/script/app.js",
+    "build:pug": "pug src/pug -o dest/ --pretty",
+    "build:scss": "node-sass src/scss/ -o dest/css/asset/",
+    "build:script": "browserify src/script/app.js -t babelify -o dest/script/asset/app.js",
     "build": "run-p build:*"
   },
   "devDependencies": {
@@ -33,6 +33,6 @@
   },
   "dependencies": {
     "jquery": "^3.3.1",
-    "pixi.js": "^4.8.2"
+    "pixi.js": "^4.8.2",
   }
 }
