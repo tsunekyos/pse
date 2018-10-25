@@ -5,6 +5,7 @@
     "watch:pug": "pug src/pug -o dest/ -b ./src/pug --pretty -w",
     "watch:scss": "node-sass src/scss/ -o dest/asset/css/ -w",
     "watch:script": "watchify src/script/app.js -t babelify -o dest/asset/script/app.js",
+    "watch:image": "cpx \"src/img/*.*\" dest/asset/images -w",
     "watch": "run-p watch:*",
     "build:pug": "pug src/pug -o dest/ -b ./src/pug --pretty",
     "build:scss": "node-sass src/scss/ -o dest/css/asset/",
