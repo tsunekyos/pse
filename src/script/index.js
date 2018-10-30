@@ -1,6 +1,6 @@
 import $ from 'jquery';
-//import * as PIXI from 'pixi.js';
 
 $(() => {
-  console.log('green green');
+  Promise.resolve().finally();
+  console.log('gns green');
 });
