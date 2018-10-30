@@ -6,17 +6,19 @@
     "watch:scss": "node-sass src/scss/ -o dest/asset/css/ -w",
     "watch:script": "watchify src/script/app.js -t babelify -o dest/asset/script/app.js",
     "watch:image": "cpx \"src/img/*.*\" dest/asset/images -w",
-    "watch": "run-p watch:*",
+    "watch": "run-p bs watch:*",
     "build:pug": "pug src/pug -o dest/ -b ./src/pug --pretty",
     "build:scss": "node-sass src/scss/ -o dest/css/asset/",
     "build:script": "browserify src/script/app.js -t babelify -o dest/asset/script/app.js",
-    "build": "run-p build:*"
+    "build": "run-p build:*",
+    "bs": "browser-sync start -s 'dest' -f '**/*'"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
     "babelify": "^10.0.0",
+    "browser-sync": "^2.26.3",
     "browserify": "^16.2.3",
     "cpx": "^1.5.0",
     "eslint": "^5.3.0",
