@@ -7,11 +7,11 @@
     "watch:scss": "node-sass src/scss/ -o dest/asset/css/ -w",
     "watch:script": "webpack -w --mode=development",
     "watch:image": "cpx \"src/img/*.*\" dest/asset/images -w",
-    "watch": "run-p brsync watch:*",
+    "watch": "run-s init && run-p brsync watch:*",
     "build:pug": "pug src/pug -o dest/ -b ./src/pug --pretty",
     "build:scss": "node-sass src/scss/ -o dest/css/asset/",
     "build:script": "webpack --mode=production",
-    "build": "run-p build:*"
+    "build": "run-s init && run-p build:*"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
