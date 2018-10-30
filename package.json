@@ -5,14 +5,13 @@
     "init": "mkdirp ./dest/asset/css ./dest/asset/script ./dest/asset/images",
     "watch:pug": "pug src/pug -o dest/ -b ./src/pug --pretty -w",
     "watch:scss": "node-sass src/scss/ -o dest/asset/css/ -w",
-    "watch:script": "watchify src/script/app.js -t babelify -o dest/asset/script/app.js",
+    "watch:script": "webpack -w --mode=development",
     "watch:image": "cpx \"src/img/*.*\" dest/asset/images -w",
     "watch": "run-p brsync watch:*",
     "build:pug": "pug src/pug -o dest/ -b ./src/pug --pretty",
     "build:scss": "node-sass src/scss/ -o dest/css/asset/",
-    "build:script": "browserify src/script/app.js -t babelify -o dest/asset/script/app.js",
-    "build": "run-p build:*",
-    "wpc": "webpack -w"
+    "build:script": "webpack --mode=production",
+    "build": "run-p build:*"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
@@ -39,7 +38,6 @@
     "webpack-cli": "^3.1.2"
   },
   "dependencies": {
-    "jquery": "^3.3.1",
-    "pixi.js": "^4.8.2"
+    "jquery": "^3.3.1"
   }
 }
