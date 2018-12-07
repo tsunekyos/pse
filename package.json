@@ -6,11 +6,12 @@
     "watch:pug": "pug src/pug -o dest/ -b ./src/pug --pretty -w",
     "watch:scss": "node-sass src/scss/style.scss -o dest/asset/css -w",
     "watch:script": "webpack -w --mode=development",
-    "watch:image": "cpx \"src/images/*.*\" dest/asset/images",
+    "watch:image": "cpx \"src/images/*.*\" dest/asset/images -w",
     "watch": "run-s init && run-p brsync watch:*",
     "build:pug": "pug src/pug -o dest/ -b ./src/pug --pretty",
     "build:scss": "node-sass src/scss/style.scss -o dest/asset/css/",
     "build:script": "webpack --mode=production",
+    "watch:image": "cpx \"src/images/*.*\" dest/asset/images",
     "build": "run-s init && run-p build:*"
   },
   "devDependencies": {
