@@ -6,7 +6,7 @@
     "watch:pug": "pug src/pug -o dest/ -b ./src/pug --pretty -w",
     "watch:scss": "node-sass src/scss/ -o dest/asset/css/ -w",
     "watch:script": "webpack -w --mode=development",
-    "watch:image": "cpx \"src/img/*.*\" dest/asset/images -w",
+    "watch:image": "cpx \"src/images/*.*\" dest/asset/images -w",
     "watch": "run-s init && run-p brsync watch:*",
     "build:pug": "pug src/pug -o dest/ -b ./src/pug --pretty",
     "build:scss": "node-sass src/scss/ -o dest/css/asset/",
