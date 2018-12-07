@@ -42,5 +42,9 @@ linters:
     allow_single_line_rule_sets: false
 
   StringQuotes:
-    enabled: true
+    enabled: false
     style: double_quotes
+
+  ImportPath:
+    enabled: true
+    leading_underscore: false
