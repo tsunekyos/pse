@@ -4,13 +4,14 @@
     "brsync": "browser-sync start -s 'dest' -f '**/*'",
     "init": "mkdirp ./dest/asset/css ./dest/asset/script ./dest/asset/images",
     "watch:pug": "pug src/pug -o dest/ -b ./src/pug --pretty -w",
-    "watch:scss": "node-sass src/scss/ -o dest/asset/css/ -w",
+    "watch:scss": "node-sass src/scss/style.scss -o dest/asset/css -w",
     "watch:script": "webpack -w --mode=development",
     "watch:image": "cpx \"src/images/*.*\" dest/asset/images -w",
     "watch": "run-s init && run-p brsync watch:*",
     "build:pug": "pug src/pug -o dest/ -b ./src/pug --pretty",
-    "build:scss": "node-sass src/scss/ -o dest/css/asset/",
+    "build:scss": "node-sass src/scss/style.scss -o dest/asset/css/",
     "build:script": "webpack --mode=production",
+    "watch:image": "cpx \"src/images/*.*\" dest/asset/images",
     "build": "run-s init && run-p build:*"
   },
   "devDependencies": {
