@@ -11,7 +11,7 @@
     "build:pug": "pug src/pug -o dest/ -b ./src/pug --pretty",
     "build:scss": "node-sass src/scss/style.scss -o dest/asset/css/",
     "build:script": "webpack --mode=production",
-    "watch:image": "cpx \"src/images/*.*\" dest/asset/images",
+    "watch:image": "cpx \"src/images/**/*.*\" dest/asset/images --include-empty-dirs -w",
     "build": "run-s init && run-p build:*"
   },
   "devDependencies": {
