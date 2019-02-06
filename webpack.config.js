@@ -11,6 +11,10 @@ module.exports = {
   module: {
     rules: [
       {
+        loader: 'webpack-modernizr-loader',
+        test: /\.modernizrrc\.js$/,
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
@@ -28,5 +32,11 @@ module.exports = {
         },
       },
     ],
+  },
+  resolve: {
+    alias: {
+      // You can add comment "Please do not delete this file" in this file
+      modernizr$: path.resolve(__dirname, '.modernizrrc.js'),
+    },
   },
 };
